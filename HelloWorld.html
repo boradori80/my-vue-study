@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue Hello World</title>
+  <!-- Vue 3 CDN 가져오기 -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #1a1a2e;
+      color: #e2e8f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: #162447;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+    input {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #1f4068;
+      background: #1f4068;
+      color: white;
+      margin-top: 10px;
+      width: 80%;
+      outline: none;
+    }
+    input:focus {
+      border-color: #42b883;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+    <div class="card">
+      <!-- 이중 중괄호(Mustache)를 사용한 데이터 렌더링 -->
+      <h1>{{ message }}</h1>
+      <p>실시간 타이핑 반영:</p>
+      <!-- 양방향 데이터 바인딩 (v-model) -->
+      <input type="text" v-model="message" placeholder="메시지를 입력해보세요">
+    </div>
+  </div>
+
+  <script>
+    const { createApp, ref } = Vue;
+
+    // Vue 애플리케이션 인스턴스 생성
+    createApp({
+      setup() {
+        // 반응형 데이터 정의
+        const message = ref('Hello, Vue 3!');
+
+        return {
+          message
+        }
+      }
+    }).mount('#app'); // #app 요소에 마운트
+  </script>
+</body>
+</html>
