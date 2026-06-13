@@ -17,14 +17,17 @@
 ## 📈 학습 일지 (History Logs)
 
 ### 📅 Day 1 (2026-06-13)
-- **오늘의 학습 목표**: Vue.js 학습 로드맵 설정 및 개발 환경 구상하기
+- **오늘의 학습 목표**: Vue.js 학습 로드맵 설정, HelloWorld 예제 생성, 카운터 앱 만들기
 - **학습한 내용 / 키워드**:
-  - Vue 3 학습 계획 수립 (CDN -> Vite & SFC -> Component Deep Dive -> Routing/State -> Deploy)
-  - GitHub 저장소 연동 및 학습 가이드(`study_guide.md`), 학습 일지(`study_history.md`) 설정 완료
+  - Vue 3 CDN 가져오기 (`<script src="...">`)
+  - Vue 인스턴스 생성 및 HTML 마운트 (`createApp`, `mount`)
+  - 반응성 데이터 선언 (`ref`), 스크립트 내에서 `.value` 수정
+  - 이벤트 처리 (`@click`) 및 동적 클래스 바인딩 (`:class`)
 - **작성한 예제 / 프로젝트**:
-  - 첫 번째 Hello World CDN 템플릿 코드 확보 (`study_guide.md` 참조)
+  - [HelloWorld.html](file:///d:/my-vue-study/HelloWorld.html): 이중 중괄호(`{{ message }}`)와 `v-model` 양방향 바인딩
+  - [Counter.html](file:///d:/my-vue-study/Counter.html): `ref`와 `@click`을 사용한 실시간 카운터 앱
 - **어려웠던 점 & 해결 과정**:
-  - 무엇부터 공부해야 할지 막막했으나 공식 가이드에 맞춰 5단계 학습 단계를 나누어 극복함.
+  - 스크립트 영역에서 `ref` 변수를 조작할 때는 꼭 `.value`를 붙여야 하지만, HTML 영역(`template`)에서는 자동으로 풀려서(unwrapping) `{{ count }}`처럼 변수명만 쓰면 된다는 점을 배움.
 - **내일의 계획**:
-  - HTML 파일로 가이드의 1단계 'Hello World' 실행해보기
-  - 카운터 앱을 만들며 반응성(`ref`), 이벤트 처리(`@click`) 학습하기
+  - 2단계로 넘어가 Vite를 활용해 로컬 Vue 개발 환경 구축해보기
+
