@@ -31,3 +31,15 @@
 - **내일의 계획**:
   - 2단계로 넘어가 Vite를 활용해 로컬 Vue 개발 환경 구축해보기
 
+### 📅 Day 2 (2026-06-14)
+- **오늘의 학습 목표**: Vite를 활용한 Vue 3 개발 환경 구축 및 싱글 파일 컴포넌트(SFC)와 Composition API 기초 학습
+- **학습한 내용 / 키워드**:
+  - Vite 프로젝트 초기화 (`create-vite`) 및 기존 파일 보호를 위한 세팅 정리
+  - 싱글 파일 컴포넌트(SFC: `.vue`) 구조 (`<script setup>`, `<template>`, `<style scoped>`) 이해
+  - Google Fonts(Outfit, Inter)와 Glassmorphic CSS 레이아웃, 애니메이션을 적용한 인터랙티브 UI 구현
+- **작성한 예제 / 프로젝트**:
+  - [App.vue](file:///d:/my-vue-study/src/App.vue): 현대적이고 반응성이 높은 카운터 SFC 예제
+- **어려웠던 점 & 해결 과정**:
+  - 기존의 소중한 파일들(`study_guide.md`, `Counter.html` 등)이 유실되는 것을 방지하기 위해, 임시 폴더에서 Vite 프로젝트를 스캐폴딩한 후 루트 디렉토리로 안전하게 설정과 코드를 이관 및 정비하는 방식으로 문제를 해결함.
+- **내일의 계획**:
+  - 3단계: Component Deep Dive (컴포넌트 심화) 진입 및 부모-자식 컴포넌트 간 Props & Emits 기반의 Todo List 컴포넌트 설계 및 구현
